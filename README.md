@@ -50,3 +50,19 @@ There will be two routes available:
 GET  /:collection/:id -- retrieves a document by id
 POST /:collection     -- creates a new document or a new version of the document
 ```
+
+## Testing
+
+To send new JSON payloads, you can use one of the two commands below.
+
+### Posting a JSON file contents
+
+```
+curl -v  -H 'Content-type: application/json' -X POST http://localhost:8080/results -d @./path/to/json/file.json
+```
+
+### Posting a JSON string
+
+```
+curl -v  -H 'Content-type: application/json' -X POST http://localhost:8080/results -d '{"this": "is", "my": "json"}'
+```
